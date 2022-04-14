@@ -56,15 +56,11 @@ class VetControllerTests {
 		helen.setFirstName("Helen");
 		helen.setLastName("Leary");
 		helen.setId(2);
-		Vet mike = new Vet();
-		mike.setFirstName("Michael");
-		mike.setLastName("Leary");
-		mike.setId(3);
 		Specialty radiology = new Specialty();
 		radiology.setId(1);
 		radiology.setName("radiology");
 		helen.addSpecialty(radiology);
-		given(this.vets.findAll()).willReturn(Lists.newArrayList(james, helen, mike));
+		given(this.vets.findAll()).willReturn(Lists.newArrayList(james, helen));
 	}
 
 	@Test
